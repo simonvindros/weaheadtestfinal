@@ -1,0 +1,119 @@
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
+.nav {
+    display: flex;
+    flex: 1;
+    
+}
+
+.navlist {
+    display: flex;
+    flex: 1;
+    justify-content: space-evenly;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+.navlist > li:hover > * {
+    color: blue;
+}
+
+.navlist > li > a {
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    text-decoration: inherit;
+    justify-content: center;
+    align-items: center;
+    color: grey;
+    border-radius: 8px;
+    padding: 8px;
+    gap: 4px;
+}
+
+.navlist > li > a > i {
+    display: flex;
+    flex: 0;
+}
+
+.gray-body {
+    display: flex;
+    flex: 1;
+    background-color: grey;
+    padding: 128px 64px;
+}
+
+.gray-body-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    gap: 16px;
+}
+
+.row1 {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    height: 240px;
+}
+
+.box1 {
+    position: relative;
+    display: flex;
+    flex: 2;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.box1 > span {
+    position: absolute;
+    top: -40px;
+    font-weight: 600;
+    font-size: 24px;
+    border-bottom: 1px solid black;
+    width: 96%;
+}
+
+.box2 {
+    display: flex;
+    flex: 1;
+    background-color: blue;
+    border-radius: 8px;
+}
+
+.row2 {
+    display: flex;
+    flex: 1;
+    height: 240px;
+}
+
+.box3 {
+    display: flex;
+    flex: 1;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.login {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.login > span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: 600;
+}
+
+.login > span > img {
+    border-radius: 50%;
+    height: 32px;
+    width: 32px;
+}
