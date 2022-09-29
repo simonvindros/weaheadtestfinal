@@ -25,27 +25,29 @@ const createRow = () => {
         currCell.innerHTML = e
     })
 
-    row.id = table.children.length
-
     var secondToLastCellInRow = row.insertCell(cellArr.length)
-    secondToLastCellInRow.innerHTML = `<td><button onclick='editRow(${table.children.length - 1})' id=${table.children.length - 1}>Redigera</button></td>`
+    secondToLastCellInRow.innerHTML =
+        `<td><button onclick='editRow()'>Redigera</button></td>`
+
     var lastCellInRow = row.insertCell(cellArr.length + 1)
     lastCellInRow.innerHTML =
-        `<td><button onclick='deleteRow(${table.children.length - 1})' id=${table.children.length - 1}> Radera</button ></td >`
+        `<td><button onclick='deleteRow()'> Radera</button ></td >`
 
 }
 
-const deleteRow = (e) => {
-    document.getElementById("weahead-table").deleteRow(e)
+const deleteRow = () => {
+    var index, table = document.getElementById('weahead-table')
+
+    for (var i = 0; i < table.rows.length; i++) {
+        table.rows[i].cells[6].onclick = function () {
+            index = this.parentElement.rowIndex - 1
+            table.deleteRow(index)
+        }
+    }
 }
 
-const editRow = (e) => {
-
-    console.log(e)
-
+const editRow = () => {
     var row = document.getElementById(e)
-
-    console.log(row.children)
 
     const cellArr = [
         "project",
@@ -57,5 +59,6 @@ const editRow = (e) => {
 
 
     //loop through element and match each cell with corresponding element in submitform
+    //like in deleteRow()
 
 }
